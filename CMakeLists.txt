@@ -24,7 +24,7 @@ else()
     set(Py_VERSION "2")
 endif()
 
-if (NOT CMAKE_VERSION VERSION_LESS "3.12")
+if (CMAKE_VERSION VERSION_LESS "3.12")
     find_package(Python${Py_VERSION} COMPONENTS Interpreter)
     set(Python_EXECUTABLE "${Python${Py_VERSION}_EXECUTABLE}")
 else()
